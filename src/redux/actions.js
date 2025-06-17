@@ -9,8 +9,8 @@ export const fetchLorem = () => {
     dispatch({ type: FETCH_LOREM_REQUEST });
 
     try {
-      const response = await axios.get('https://jsonplaceholder.typicode.com/posts/1');
-      const { title, body } = response.data;
+      const response = await axios.get('https://jsonplaceholder.typicode.com/posts/');
+      const { title, body } = response.data[0];
 
       dispatch({
         type: FETCH_LOREM_SUCCESS,
