@@ -9,7 +9,7 @@ export const fetchLorem = () => {
     dispatch({ type: FETCH_LOREM_REQUEST });
 
     try {
-      const response = await axios.get('https://baconipsum.com/api/?type=meat-and-filler&paras=1&format=json');
+      const response = await axios.get('https://jsonplaceholder.typicode.com/posts/1');
       const { title, body } = response.data;
 
       dispatch({
