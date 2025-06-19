@@ -11,6 +11,7 @@ export const fetchLorem = () => {
     try {
       const response = await axios.get('https://jsonplaceholder.typicode.com/posts/');
       const { title, body } = response.data[0];
+      
 
       dispatch({
         type: FETCH_LOREM_SUCCESS,
